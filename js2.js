@@ -1,9 +1,8 @@
 
 
 function heeHaw() {
-    let n = 1;
 
-    while(n <= 100) {
+    for(let n =1; n <= 100; n++) {
 
         if((n % 3) == 0 && (n % 5) != 0) {
             document.write("Hee !");
@@ -21,8 +20,6 @@ function heeHaw() {
             document.write(n);
             document.write("<br>");
         }
-
-        n++;
     }
 }
 
