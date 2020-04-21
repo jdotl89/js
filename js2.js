@@ -1,8 +1,8 @@
+document.getElementById("submitBTN").onclick = verifyInput;
 
+function heeHaw(num) {
 
-function heeHaw() {
-
-    for(let n =1; n <= 100; n++) {
+    for(let n = num; n <= 100; n++) {
 
         if((n % 3) == 0 && (n % 5) != 0) {
             document.write("Hee !");
@@ -23,4 +23,15 @@ function heeHaw() {
     }
 }
 
-heeHaw();
+function verifyInput() {
+    // check user input is a valid number
+    let number = document.getElementById("userInput").value;
+    if(isNaN(number) || number == "") {
+        let errFirst = document.getElementById("errNumber");
+        errFirst.style.visibility = "visible";
+    }
+    else {
+        heeHaw(number);
+    }
+}
+
